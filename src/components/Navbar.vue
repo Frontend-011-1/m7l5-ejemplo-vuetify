@@ -16,8 +16,8 @@ const handleSwitchChange = () => {
     <v-app-bar-title>Aprendiendo Vuetify</v-app-bar-title>
 
     <!-- switch de tema oscuro/claro -->
-    <v-switch class="my-auto" true-value="dark" false-value="light" @update:model-value="handleSwitchChange"
-      v-model="theme">
+    <v-switch class="my-auto" v-model="theme" true-value="dark" false-value="light"
+      @update:model-value="handleSwitchChange">
       <template #prepend>
         <v-icon icon="mdi-weather-sunny" color="white" v-if="theme === 'light'"></v-icon>
       </template>
@@ -26,11 +26,11 @@ const handleSwitchChange = () => {
       </template>
     </v-switch>
 
-    <div>
-      <v-btn to="/">Home</v-btn>
-      <v-btn to="/cards">Cards</v-btn>
-      <v-btn to="/form">Form</v-btn>
-    </div>
+
+    <v-btn to="/">Home</v-btn>
+    <v-btn to="/cards">Cards</v-btn>
+    <v-btn to="/form">Form</v-btn>
+
 
 
   </v-app-bar>
